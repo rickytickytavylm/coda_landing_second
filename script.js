@@ -42,7 +42,6 @@
       style: 'currency', currency: 'RUB', maximumFractionDigits: 0,
     }).format(config.price);
     $('[data-price-value]').textContent = price;
-    $('[data-sticky-price]').textContent = price;
     $('[data-price-block]').hidden = false;
     if (typeof config.priceNote === 'string' && config.priceNote.trim()) {
       $('[data-price-note]').textContent = config.priceNote;
@@ -66,23 +65,12 @@
   const menu = $('#mobile-menu');
   const backdrop = $('.menu-backdrop');
   const main = $('main');
-  const sticky = $('.mobile-cta');
   const paymentModal = $('#payment-modal');
   const desktop = window.matchMedia('(min-width: 901px)');
-  const mobile = window.matchMedia('(max-width: 767px)');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let menuOpen = false;
   let paymentOpen = false;
-  let heroVisible = true;
-  let joinVisible = false;
   let overflowBeforeMenu = '';
-
-  function updateSticky() {
-    const visible = mobile.matches && !heroVisible && !joinVisible && !menuOpen && !paymentOpen;
-    sticky.classList.toggle('mobile-cta--visible', visible);
-    sticky.setAttribute('aria-hidden', String(!visible));
-    sticky.toggleAttribute('inert', !visible);
-  }
 
   // Меню: блокировка фона, Escape и ограничение перемещения фокуса.
   function setMenu(open, restoreFocus = false) {
@@ -104,7 +92,6 @@
       document.body.style.overflow = overflowBeforeMenu;
       if (restoreFocus) toggle.focus({ preventScroll: true });
     }
-    updateSticky();
   }
 
   toggle.addEventListener('click', () => setMenu(!menuOpen, menuOpen));
@@ -135,7 +122,6 @@
     else media.addListener(listener);
   }
   watchMedia(desktop, () => { if (desktop.matches) setMenu(false); });
-  watchMedia(mobile, updateSticky);
 
   // Вкладки: клик, стрелки, Home и End. Все панели уже находятся в HTML.
   const tabs = $$('[role="tab"]', $('.format-tabs')).filter((tab) => !tab.hidden);
@@ -198,7 +184,6 @@
     paymentModal.hidden = true;
     paymentModal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = overflowBeforePayment;
-    updateSticky();
     paymentOpener?.focus({ preventScroll: true });
   }
 
@@ -213,7 +198,6 @@
     document.body.style.overflow = 'hidden';
     mountPaymentWidget();
     $('.payment-modal__close', paymentModal)?.focus({ preventScroll: true });
-    updateSticky();
   }
 
   $$('[data-open-payment]').forEach((button) => {
@@ -251,17 +235,5 @@
         reveal.observe(node);
       });
     }
-    const hero = $('.hero');
-    const join = $('#join');
-    const sections = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.target === hero) heroVisible = entry.isIntersecting;
-        if (entry.target === join) joinVisible = entry.isIntersecting;
-      });
-      updateSticky();
-    }, { threshold: 0 });
-    sections.observe(hero);
-    sections.observe(join);
   }
-  updateSticky();
 })();

@@ -8,18 +8,26 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Почему я терплю — Школа Шурова" />
     <meta property="og:description" content="Увидеть, что удерживает именно вас, отделить факты от оправданий и вернуть себе право выбирать." />
+    <meta property="og:image" content="https://raw.githubusercontent.com/rickytickytavylm/coda_landing_second/main/assets/images/og-cover.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Почему я терплю — курс Школы Шурова" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Почему я терплю — Школа Шурова" />
+    <meta name="twitter:description" content="Курс о границах, отношениях и праве выбирать." />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/rickytickytavylm/coda_landing_second/main/assets/images/og-cover.jpg" />
     <meta name="color-scheme" content="light" />
     <title>Почему я терплю — Школа Шурова</title>
     <link rel="preload" href="./assets/fonts/onest-regular.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="./assets/fonts/literata-italic.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="stylesheet" href="./styles.css?v=8" />
-    <script defer src="./site-config.js?v=8"></script>
-    <script defer src="./script.js?v=8"></script>
+    <link rel="stylesheet" href="./styles.css?v=10" />
+    <script defer src="./site-config.js?v=10"></script>
+    <script defer src="./script.js?v=10"></script>
   </head>
   <body>
   <a class="skip-link" href="#about">Перейти к содержанию</a>
   <header class="header">
-    <a href="#top" class="brand" aria-label="Школа Шурова, начало страницы"><span class="brand__school">Школа</span><span class="brand__name">Шурова.</span></a>
+    <a href="#top" class="brand" aria-label="Школа Шурова, начало страницы">школа шурова</a>
     <nav aria-label="Основная навигация" class="nav-desktop">
       <a href="#about">О курсе</a>
       <a href="#program">Программа</a>
@@ -29,7 +37,7 @@
     <button class="header__join" type="button" data-open-payment>Купить курс</button>
     <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu" type="button"><span class="menu-toggle__icon" data-menu-icon="open"><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" aria-hidden="true" focusable="false" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg></span><span class="menu-toggle__icon" data-menu-icon="close" hidden=""><svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" aria-hidden="true" focusable="false" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg></span></button>
     <nav id="mobile-menu" class="mobile-menu" aria-label="Мобильная навигация" hidden="">
-      <span class="mobile-menu__label">Почему я терплю</span>
+      <span class="mobile-menu__label">Школа Шурова / Почему я терплю</span>
       <a href="#about"><span class="mobile-menu__number">01</span>О курсе</a>
       <a href="#program"><span class="mobile-menu__number">02</span>Программа</a>
       <a href="#format"><span class="mobile-menu__number">03</span>Формат</a>
@@ -41,8 +49,8 @@
   <main id="top">
     <section class="hero" aria-labelledby="hero-title">
       <picture class="photo hero__photo">
-        <source media="(max-width: 767px)" srcset="./assets/images/hero-mobile.webp?v=9">
-        <img src="./assets/images/hero-desktop.webp?v=9" alt="" width="3840" height="2160" loading="eager" fetchpriority="high" decoding="async">
+        <source media="(max-width: 767px)" srcset="./assets/images/hero-mobile.webp?v=10">
+        <img src="./assets/images/hero-desktop.webp?v=10" alt="" width="3840" height="2160" loading="eager" fetchpriority="high" decoding="async">
       </picture>
       <div class="hero__shade"></div>
       <div class="hero__content">
@@ -52,7 +60,7 @@
       <div class="hero__bottom">
         <div class="hero__cta">
           <p>Не торопить себя с ответом.<br class="mobile-break"> Сначала увидеть, что происходит.</p>
-          <button class="button button--light" type="button" data-open-payment>Купить курс</button>
+          <a class="button button--light" href="#program">Посмотреть программу</a>
         </div>
       </div>
       <a class="hero__scroll" href="#about" aria-label="Узнать о курсе"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" aria-hidden="true" focusable="false" viewBox="0 0 256 256"><path d="M205.66,149.66l-72,72a8,8,0,0,1-11.32,0l-72-72a8,8,0,0,1,11.32-11.32L120,196.69V40a8,8,0,0,1,16,0V196.69l58.34-58.35a8,8,0,0,1,11.32,11.32Z"></path></svg></a>
@@ -113,7 +121,6 @@
           <span class="eyebrow eyebrow--pill">Программа курса</span>
           <h2 id="program-title">4 шага<br> от «потерплю»<br> к собственному<br> <em>решению</em></h2>
           <p>Без давления и готовых рецептов<br> В своём темпе</p>
-          <button class="button button--dark" type="button" data-open-payment>Купить курс</button>
           <div class="program__index" aria-hidden="true">
             <span>Привычка</span>
             <span>Страх</span>
@@ -307,7 +314,6 @@
           <span class="eyebrow eyebrow--light">Важная точка</span>
           <h2 id="statement-title">Ваши чувства<br> не требуют<br> <em>оправданий</em></h2>
           <p>Если вам плохо — этого уже достаточно,<br> чтобы остановиться и разобраться.</p>
-          <button class="button button--light" type="button" data-open-payment>Купить курс</button>
         </div>
         <span class="statement-section__caption">Почему я терплю / Школа Шурова</span>
       </section>
@@ -377,30 +383,10 @@
         </div>
       </section>
       <footer class="footer page-inset">
-        <div class="footer__top">
-          <p>Вы имеете право<br> быть на своей <em>стороне</em></p>
-          <div class="footer__nav">
-            <span>Курс</span>
-            <a href="#about">О курсе</a>
-            <a href="#program">Программа</a>
-            <a href="#format">Формат</a>
-            <a href="#faq">Вопросы</a>
-          </div>
-          <div class="footer__contacts">
-            <span>На связи</span>
-            <a href="https://t.me/zhanna8310" target="_blank" rel="noopener noreferrer" data-admin-link="">Участие в курсе</a>
-            <a href="https://t.me/rickytickytavylm" target="_blank" rel="noopener noreferrer" data-support-link="">Техническая поддержка</a>
-            <button class="button button--dark" type="button" data-open-payment>Купить курс</button>
-          </div>
-        </div>
-        <a class="footer__wordmark" href="#top" aria-label="Школа Шурова, вернуться к началу">
-          <span>Школа</span>
-          <em>Шурова</em>
-        </a>
-        <div class="footer__bottom">
-          <span data-copyright="">© 2026 Школа Шурова</span>
-          <span>Почему я терплю</span>
-          <a href="#top">К началу страницы</a>
+        <div class="footer__head">
+          <a class="footer__brand" href="#top" aria-label="Школа Шурова, вернуться к началу">школа шурова</a>
+          <span>Курс «Почему я терплю»</span>
+          <a href="#top">К началу ↑</a>
         </div>
         <div class="footer__legal">
           <div>
@@ -423,16 +409,14 @@
             <a href="https://t.me/Shurovhelp911" target="_blank" rel="noopener">@Shurovhelp911</a>
           </div>
         </div>
+        <div class="footer__bottom">
+          <span data-copyright="">© 2026 Школа Шурова</span>
+          <a href="https://t.me/zhanna8310" target="_blank" rel="noopener noreferrer" data-admin-link="">Участие в курсе</a>
+          <a href="https://t.me/rickytickytavylm" target="_blank" rel="noopener noreferrer" data-support-link="">Техническая поддержка</a>
+        </div>
       </footer>
     </div>
   </main>
-  <div class="mobile-cta " aria-hidden="true" inert="">
-    <div>
-      <span>Почему я терплю</span>
-      <span data-sticky-price="">Курс Школы Шурова</span>
-    </div>
-    <button class="button button--dark" type="button" data-open-payment>Купить</button>
-  </div>
   <div class="payment-modal" id="payment-modal" hidden aria-hidden="true">
     <button class="payment-modal__backdrop" type="button" data-close-payment aria-label="Закрыть форму оплаты"></button>
     <section class="payment-modal__card" role="dialog" aria-modal="true" aria-labelledby="payment-title">
