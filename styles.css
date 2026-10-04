@@ -194,7 +194,8 @@ details > summary:hover .details-icon { background:#c7c7c7; }
 .enrollment-card__price { margin-bottom:23px; }
 .enrollment-card__price > span { font-size:2.5rem; line-height:1.1; letter-spacing:-.07em; }
 .enrollment-card__price > p { font-size:.875rem; color:#666; margin-top:10px; }
-.enrollment-card__cta { width:100%; min-height:54px; }
+.enrollment-card__cta { width:100%; min-height:54px; border-radius:12px; background:#35392b; }
+.enrollment-card__cta:hover { background:#272b22; }
 .enrollment-card__note { color:#727272; margin-top:14px; font-size:.8125rem; line-height:1.4; letter-spacing:-.015em; }
 
 .faq { display:grid; grid-template-columns:.9fr 1.1fr; gap:10%; padding-block:70px 130px; border-top:1px solid var(--rule); margin-inline:var(--inset); padding-inline:0; }
