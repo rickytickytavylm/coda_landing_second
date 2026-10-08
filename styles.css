@@ -191,9 +191,9 @@ details > summary:hover .details-icon { background:#c7c7c7; }
 .enrollment-card__list { margin:36px 0 30px; padding:0; list-style:none; display:flex; flex-direction:column; gap:13px; }
 .enrollment-card__list li { display:flex; align-items:start; gap:10px; font-size:.9375rem; line-height:1.35; letter-spacing:-.025em; }
 .enrollment-card__list svg { margin-top:1px; }
-.enrollment-card__price { margin-bottom:23px; }
-.enrollment-card__price > span { font-size:2.5rem; line-height:1.1; letter-spacing:-.07em; }
-.enrollment-card__price > p { font-size:.875rem; color:#666; margin-top:10px; }
+.enrollment-card__price { margin:6px 0 23px; padding-top:22px; border-top:1px solid rgba(0,0,0,.08); }
+.enrollment-card__price > span { display:block; font-size:clamp(2.25rem,4vw,2.75rem); line-height:1; letter-spacing:-.06em; font-variant-numeric:lining-nums tabular-nums; }
+.enrollment-card__price > p { font-size:.875rem; color:#666; margin-top:8px; letter-spacing:-.02em; }
 .enrollment-card__cta { width:100%; min-height:54px; border-radius:12px; background:#35392b; }
 .enrollment-card__cta:hover { background:#272b22; }
 .enrollment-card__note { color:#727272; margin-top:14px; font-size:.8125rem; line-height:1.4; letter-spacing:-.015em; }
